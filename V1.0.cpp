@@ -13,7 +13,7 @@ void main()
 	char s1[100] = "wc.exe-c file.txt";
 	char s2[100] = "wc.exe-w file.txt";
 	char s3[100] = "wc.exe-s file.txt";
-	printf("ÇëÊäÈë¼ÆÊıÖ¸Áî:");
+	printf("è¯·è¾“å…¥è®¡æ•°æŒ‡ä»¤:");
 	gets(mingling);
 	if(strcmp(mingling,s1) == 0)
 	{
@@ -39,7 +39,7 @@ void zifushu(FILE *wenjian)
 		fputc(c,stdout);
 		zifu++;
 	}
-	printf("\n×Ö·ûÊı=%d\n",zifu);
+	printf("\nå­—ç¬¦æ•°=%d\n",zifu);
 }
 
 void dancishu(FILE *wenjian)
@@ -60,7 +60,7 @@ void dancishu(FILE *wenjian)
 			danci++;
 		}
 	}
-	printf("\nµ¥´ÊÊı=%d\n",danci);
+	printf("\nå•è¯æ•°=%d\n",danci);
 }
 
 void juzishu(FILE *wenjian)
@@ -75,5 +75,5 @@ void juzishu(FILE *wenjian)
 			juzi++;
 		}
 	}
-	printf("\n¾ä×ÓÊı=%d\n",juzi);
+	printf("\nå¥å­æ•°=%d\n",juzi);
 }
