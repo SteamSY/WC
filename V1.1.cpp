@@ -15,17 +15,28 @@ void main()
 	char s3[100] = "wc.exe-s file.txt";
 	printf("请输入计数指令:");
 	gets(mingling);
-	if(strcmp(mingling,s1) == 0)
+	while(1)
 	{
-		zifushu(wenjian);
-	}
-	if(strcmp(mingling,s2) == 0)
-	{
-		dancishu(wenjian);
-	}
-	if(strcmp(mingling,s3) == 0)
-	{
-		juzishu(wenjian);
+		if(strcmp(mingling,s1) == 0)
+		{
+			zifushu(wenjian);
+			break;
+		}
+		if(strcmp(mingling,s2) == 0)
+		{
+			dancishu(wenjian);
+			break;
+		}
+		if(strcmp(mingling,s3) == 0)
+		{
+			juzishu(wenjian);
+			break;
+		}
+		if(strcmp(mingling,s1) != 0 && strcmp(mingling,s2) != 0 && strcmp(mingling,s3) != 0)
+		{
+			printf("请重新输入正确计数指令:");
+			gets(mingling);
+		}
 	}
 	fclose(wenjian);
 }
