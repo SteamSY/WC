@@ -6,7 +6,7 @@ void dancishu(FILE *wenjian);
 void juzishu(FILE *wenjian);
 void daimahangshu(FILE *wenjian);
 void konghangshu(FILE *wenjian);
-/*void zhushihangshu(FILE *wenjian);*/
+void zhushihangshu(FILE *wenjian);
 
 void main()
 {
@@ -48,11 +48,11 @@ void main()
 			konghangshu(wenjian);
 			break;
 		}
-		/*if(strcmp(mingling,s6) == 0)
+		if(strcmp(mingling,s6) == 0)
 		{
 			zhushihangshu(wenjian);
 			break;
-		}*/
+		}
 		if(strcmp(mingling,s1) != 0 && strcmp(mingling,s2) != 0 && strcmp(mingling,s3) != 0)
 		{
 			printf("请重新输入正确计数指令:");
@@ -153,56 +153,26 @@ void konghangshu(FILE *wenjian)
 	printf("\n空行数=%d\n",konghang);
 }
 
-/*void zhushihangshu(FILE *wenjian)
+void zhushihangshu(FILE *wenjian)
 {
 	int zhushihang = 0;
-	char c;
 	int flag = 0;
-	int flag1 = 0;
-	int flag2 = 0;
+	char c;
 	while((c = fgetc(wenjian)) != EOF)
 	{
-		fputc(c,stdout);
-		if(c == '\')
+		if(c == '/')
 		{
-			flag = 1;
+			flag++;
 		}
-		if(flag == 1 && c != '\')
+		if(c == '*')
 		{
-			flag = 0;
+			flag++;
 		}
-		else
+		if(flag >= 4)
 		{
 			zhushihang++;
 			flag = 0;
-		}
-		if(flag == 1 && c != '*')
-		{
-			flag = 0;
-		}
-		else
-		{
-			flag1 = 1;
-		}
-		if(flag1 == 1 && flag == 1 && c == '\n')
-		{
-			zhushihang++;
-		}
-		if(flag1 == 1 && flag == 1 && c == '*')
-		{
-			flag2 = 1;
-		}
-		if(flag2 == 1 && flag1 == 1 && flag == 1 && c != '\')
-		{
-			flag2 = 0;
-		}
-		else
-		{
-			flag = 0;
-			flag1 = 0;
-			flag2 = 0;
-			zhushihang++;
 		}
 	}
 	printf("\n注释行数=%d\n",zhushihang);
-}*/
+}
