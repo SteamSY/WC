@@ -160,6 +160,7 @@ void zhushihangshu(FILE *wenjian)
 	char c;
 	while((c = fgetc(wenjian)) != EOF)
 	{
+		fputc(c,stdout);
 		if(c == '/')
 		{
 			flag++;
