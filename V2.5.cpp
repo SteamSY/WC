@@ -65,14 +65,27 @@ void main()
 void daimahangshu(FILE *wenjian)
 {
 	int daimahang = 0;
+	int flag = 0;
 	char c;
 	while((c = fgetc(wenjian)) != EOF)
 	{
 		fputc(c,stdout);
 		if(c == '\n')
 		{
-			daimahang++;
+			flag++;
+			if(flag >= 1)
+			{
+				daimahang++;
+			}
 		}
+		else
+		{
+			flag = 0;
+		}
+	}
+	if(flag >=1)
+	{
+		daimahang++;
 	}
 	printf("\n代码行数=%d\n",daimahang);
 }
