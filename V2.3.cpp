@@ -53,7 +53,7 @@ void main()
 			zhushihangshu(wenjian);
 			break;
 		}
-		if(strcmp(mingling,s1) != 0 && strcmp(mingling,s2) != 0 && strcmp(mingling,s3) != 0 && strcmp(mingling,s4) == 0 && strcmp(mingling,s5) == 0 && strcmp(mingling,s6) == 0)
+		if(strcmp(mingling,s1) != 0 && strcmp(mingling,s2) != 0 && strcmp(mingling,s3) != 0 && strcmp(mingling,s4) != 0 && strcmp(mingling,s5) != 0 && strcmp(mingling,s6) != 0)
 		{
 			printf("请重新输入正确计数指令:");
 			gets(mingling);
